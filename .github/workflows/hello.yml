@@ -8,8 +8,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      MESSAGE: "Hola desde variable"
+
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run test
-        run: cat test.txt
+      - name: Print variable
+        run: echo $MESSAGE
