@@ -16,3 +16,12 @@ jobs:
 
       - name: Print variable
         run: echo $MESSAGE
+
+      - name: Run test
+        run: cat test.txt
+
+      - name: Upload file
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-file
+          path: test.txt
